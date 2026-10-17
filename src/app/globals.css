@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light;
+  --color-background: #f7f7f3;
+  --color-surface: #ffffff;
+  --color-ink: #202a25;
+  --color-muted: #758078;
+  --color-line: #e8ebe6;
+  --color-primary: #315a48;
+  --color-primary-dark: #254536;
+  --color-accent: #d67b5d;
+  --shadow-card: 0 10px 30px rgb(32 42 37 / 5%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-background);
+  font-family:
+    "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(214 123 93 / 55%);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.siteMain {
+  flex: 1;
+  width: min(100% - 48px, 1320px);
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+@media (max-width: 640px) {
+  .siteMain {
+    width: min(100% - 32px, 1320px);
+    padding: 32px 0 48px;
+  }
+}

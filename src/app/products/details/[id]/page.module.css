@@ -1,0 +1,151 @@
+.page {
+  display: grid;
+  max-width: 1060px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(30px, 6vw, 76px);
+  align-items: center;
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 54px);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.imageFrame {
+  display: grid;
+  min-width: 0;
+  min-height: 430px;
+  place-items: center;
+  padding: 48px;
+  overflow: hidden;
+  border-radius: 11px;
+  background: #f5f6f2;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 340px;
+  max-width: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.category {
+  margin: 0 0 12px;
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0 0 17px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.description {
+  margin: 0 0 25px;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.purchaseInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.price {
+  color: var(--color-primary);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.rating {
+  padding: 7px 11px;
+  border-radius: 99px;
+  background: #f7f1e5;
+  color: #9b7136;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.addButton {
+  min-height: 48px;
+  padding: 0 26px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    background 150ms ease,
+    transform 150ms ease;
+}
+
+.addButton:hover {
+  transform: translateY(-1px);
+  background: var(--color-primary-dark);
+}
+
+.notFound {
+  padding: 64px 16px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.loading {
+  padding: 80px 16px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .page {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .imageFrame {
+    min-height: 300px;
+    padding: 32px;
+  }
+
+  .image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .imageFrame {
+    min-height: 240px;
+    padding: 24px;
+  }
+
+  .image {
+    height: 195px;
+  }
+}
